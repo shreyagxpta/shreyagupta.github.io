@@ -56,6 +56,11 @@ section {
     --end-color: #000;
 }
 
+.teal-blue {
+    --start-color: #00bfa5; /* Teal */
+    --end-color: #007bff;  /* Blue */
+}
+
 .blue-black {
     --start-color: #007bff;
     --end-color: #000;
@@ -69,6 +74,11 @@ section {
 .orange-black {
     --start-color: #ff8c00;
     --end-color: #000;
+}
+
+.orange-red {
+    --start-color: #ff8c00; /* Orange */
+    --end-color: #ff4500;  /* Red */
 }
 
 footer {
