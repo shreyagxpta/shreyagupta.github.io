@@ -1,37 +1,47 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #fff;
     text-align: center;
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    background: #000;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    position: fixed; /* Fix the nav bar in place */
+    top: 0; /* Stick to the top of the page */
+    width: 100%; /* Ensure it spans the full width */
+    background-color: #000; /* Keep the background color */
+    padding: 10px 0; /* Add padding for spacing */
+    z-index: 1000; /* Keep it above other elements */
 }
 
 nav ul {
-    list-style: none;
+    list-style: none; /* Remove default list styles */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex; /* Display items in a row */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between items */
+}
+
+nav li {
+    display: inline; /* Keep list items inline */
+    padding: 0 10px; /* Add padding to create spacing */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Add separator lines */
+}
+
+nav li:last-child {
+    border-right: none; /* Remove the line after the last item */
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Adjust font size */
+    transition: color 0.3s ease; /* Add hover effect */
 }
 
 nav a:hover {
-    color: #00ff00;
+    color: #1db954; /* Change color on hover (Spotify green as an example) */
 }
 
 section {
@@ -51,14 +61,14 @@ section {
     --end-color: #000;
 }
 
-.purple-black {
-    --start-color: #6a0dad;
-    --end-color: #000;
+.purple-yellow {
+    --start-color: #b469ea;
+    --end-color: #e4ef06;
 }
 
 .teal-blue {
-    --start-color: #00bfa5; /* Teal */
-    --end-color: #007bff;  /* Blue */
+    --start-color: #4bd9c6; /* Teal */
+    --end-color: #0151a7;  /* Blue */
 }
 
 .blue-black {
@@ -67,8 +77,8 @@ section {
 }
 
 .blue-red {
-    --start-color: #007bff;
-    --end-color: #ff4500;
+    --start-color: #01346b;
+    --end-color: #de2007;
 }
 
 .orange-black {
@@ -78,7 +88,17 @@ section {
 
 .orange-red {
     --start-color: #ff8c00; /* Orange */
-    --end-color: #ff4500;  /* Red */
+    --end-color: #6a2005;  /* Red */
+}
+
+.orange-purple {
+    --start-color:  #ff7f50; 
+    --end-color: #8a2be2;
+}
+
+.brown-gold {
+    --end-color: #602b06; /* Saddle Brown */
+    --start-color: #ffd700; /* Gold */
 }
 
 footer {
@@ -88,4 +108,14 @@ footer {
     bottom: 0;
     width: 100%;
     color: #fff;
+}
+
+
+/* Section-Specific Font Colors */
+.white-text {
+    color: #ffffff; /* White for teal-blue gradient */
+}
+
+.black-text {
+    color: #000; /* Yellow for purple-black gradient */
 }
