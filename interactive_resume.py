@@ -22,10 +22,10 @@ data = {
         "2023-01-01",
     ],
     "End": [
-        "2024-05-31",
+        "2025-05-31",
         "2024-08-31",
         "2023-08-31",
-        "2024-05-31",
+        "2023-05-31",
     ],
     "Description": [
         "Coordinating course logistics for 1000+ students, hands-on teaching support, and Python automation for grading efficiency.",
@@ -39,47 +39,52 @@ df = pd.DataFrame(data)
 
 # Define a custom color scale
 custom_colors = {
-    "U.C. Berkeley Department of Electrical Engineering and Computer Sciences": "#4A90E2",  # Soft Blue: Trustworthy and calming
-    "Arta Finance": "#50E3C2",  # Aqua Green: Refreshing and innovative
-    "TechCarrot": "#B8E986",  # Lime Green: Energetic and optimistic
-    "U.C. Berkeley College of Computing, Data Science, and Society": "#F5A623",  # Golden Yellow: Bright and forward-looking
+    "U.C. Berkeley Department of Electrical Engineering and Computer Sciences": "#1E90FF",  # Deep Blue: Professional and distinct
+    "Arta Finance": "#20B2AA",  # Teal: Sleek and modern
+    "TechCarrot": "#9ACD32",  # Olive Green: Subtle yet energetic
+    "U.C. Berkeley College of Computing, Data Science, and Society": "#DAA520",  # Goldenrod: Rich and bold
 }
 
-
+# Create the timeline visualization
 fig = px.timeline(
     df,
     x_start="Start",
     x_end="End",
     y="Role",
-    hover_name="Organization",  # Show only Organization as the hover title
-    hover_data={"Description": True, "Role": False, "Start": False, "End": False},  # Exclude Role, Start, and End
+    hover_name="Role",  # Ensure Role appears as the hover title
+    hover_data={
+        "Description": True,  # Include the detailed description
+        "Organization": True,  # Show Organization in hover
+        "Start": False,  # Hide start date in hover
+        "End": False,  # Hide end date in hover
+    },
     color="Organization",
     color_discrete_map=custom_colors,
     template="plotly_dark",
     title="Work Experience Timeline",
 )
 
-# Adjust the layout for better visibility and theme
+# Customize layout
 fig.update_layout(
     xaxis_title="Timeline",
+    yaxis_title="",
     title_x=0.5,
     font=dict(
-        family="Lato, Arial, sans-serif",  # Choose a clean, modern font
-        size=14,  # Adjust the font size
-        color="#FFFFFF"  # Set the font color (white)
+        family="Lato, Arial, sans-serif",
+        size=14,
+        color="#FFFFFF",
     ),
-    plot_bgcolor="rgba(34, 34, 34, 0.7)",  # Translucent background (dark gray, 70% opacity)
+    plot_bgcolor="rgba(34, 34, 34, 0.7)",  # Translucent dark background
     paper_bgcolor="rgba(34, 34, 34, 0.7)",
 )
 
-# Adjust hover label font size and style
+# Customize hover labels
 fig.update_traces(
     hoverlabel=dict(
-        font_size=12,  # Adjust font size for hover box
-        font_family="Lato, Arial, sans-serif",  # Match graph font
+        font_size=12,
+        font_family="Lato, Arial, sans-serif",
     )
 )
 
-
-# Save the visualization as an HTML file
+# Save as an HTML file
 fig.write_html("interactive_resume.html")
