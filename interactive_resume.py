@@ -4,10 +4,10 @@ import plotly.express as px
 # Prepare the DataFrame
 data = {
     "Role": [
-        "Head TA | Data100",
-        "Software Engineering & Data Analyst Intern | TechCarrot",
-        "Research & Software Engineering Intern | Arta Finance",
-        "Academic Intern | CS61B",
+        "Head TA @ Data100 - Principles & Techniques of Data Science",
+        "TechCarrot | Software Engineering & Data Analyst Intern",
+        "Arta Finance | Research & Software Engineering Intern",
+        "Academic Intern @ CS61B - Data Structures",
     ],
     "Organization": [
         "U.C. Berkeley College of Computing, Data Science, and Society",
@@ -62,7 +62,6 @@ fig = px.timeline(
 # Adjust the layout for better visibility and theme
 fig.update_layout(
     xaxis_title="Timeline",
-    yaxis_title="Roles",
     title_x=0.5,
     font=dict(
         family="Lato, Arial, sans-serif",  # Choose a clean, modern font

@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreya Gupta</title>
+    <title>Shreya Gupta | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,58 +23,50 @@
         </ul>
     </nav>
 
-    <section id="home" class="gradient purple-yellow">
+    <section id="home">
         <div class="home-container">
-            <!-- Left Column -->
-            <div class="left-column">
-                <div class="profile-card">
-                    <img src="your-photo.jpg" alt="Shreya Gupta" class="profile-img">
-                    <h1>Shreya Gupta</h1>
-                    <p>B.A. in Computer Science | B.A. in Data Science (Honors)</p>
-                    <p>University of California, Berkeley</p>
-                    <div class="contact-info">
-                        <p><strong>Email:</strong> <a href="mailto:shreya.g@berkeley.edu">shreya.g@berkeley.edu</a></p>
-                        <p><strong>Phone:</strong> 628-280-8916</p>
-                        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shreyagupta268/" target="_blank">linkedin.com/in/shreyagupta268/</a></p>
-                        <p><strong>GitHub:</strong> <a href="https://github.com/shreyagxpta/Projects" target="_blank">github.com/shreyagxpta</a></p>
-                        <p class="disclaimer"><em>Note: This is a private repo, but I'd love to share access—feel free to reach out!</em></p>
-                    </div>
-                </div>
+            <!-- Left Column for Text -->
+            <div class="home-text">
+                <h1>Shreya Gupta</h1>
+                <p>B.A. in Computer Science & Data Science (Honors)<br>University of California, Berkeley</p>
+                <a href="shreya_resume.pdf" class="cta-btn" download>Download My Resume</a>
             </div>
     
-            <!-- Right Column -->
-            <div class="right-column">
-                <div class="about-me-card modern-card">
-                    <h2>Who's Shreya???</h2>
-                    <p>I'm passionate about creating meaningful impact through technology. Whether it’s developing innovative software solutions or collaborating on data-driven projects, I thrive on tackling challenges head-on. Outside of work, you'll find me exploring the intersection of creativity and tech—or maybe perfecting my badminton serve!</p>
-                    <a href="resume_2025.pdf" target="_blank" class="cta-btn modern-btn">Download My Resume</a>
-                </div>
-            
-                <div class="key-achievements-card modern-card">
-                    <h2>Key Achievements</h2>
-                    <ul>
-                        <li>Authored two papers accepted at the Frontiers in Education 2024 Conference.</li>
-                        <li>Led and coordinated a team of 50+ teaching assistants (TAs), delivering foundational data science concepts to a class of 1200+ students while ensuring operational efficiency.</li>
-                        <li>Developed ML solutions for optimizing financial portfolios.</li>
-                        <li>Developed scalable data pipelines, dashboards, and LLM-based solutions for a global IT services provider.</li>
-                    </ul>
+            <!-- Right Column for Carousel -->
+            <div class="home-carousel">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="your-photo.jpg" alt="Achievement 1">
+                            <p class="caption">Authored two papers at Frontiers in Education 2024.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="your-photo.jpg" alt="Achievement 2">
+                            <p class="caption">Developed scalable ML solutions for financial portfolios.</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="your-photo.jpg" alt="Achievement 3">
+                            <p class="caption">Led a team of 50+ TAs for a 1200+ student course.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     
-    <section id="equitable-ed" class="gradient teal-blue black-text">
+
+    <section id="equitable-ed" class="white-text">
         <h1>Equitable Ed 4 All</h1>
         <p>Learn about my work in advancing equity in education.</p>
     </section>
     
-    <section id="data-science" class="gradient brown-gold black-text">
+    <section id="data-science" class="white-text">
         <h1>Data/Comp Sci for 1000s</h1>
         <p>Explore my contributions to making data science accessible to everyone.</p>
     </section>
     
-    <section id="resume" class="gradient blue-red white-text">
+    <section id="resume" class="white-text">
         <h1>Interactive Resume via Python, Pandas, Plotly</h1>
         <p>Hover over a role to learn more about my experiences!</p>
         <iframe
@@ -82,7 +76,7 @@
         </iframe>
     </section>
 
-    <section id="tech" class="gradient green-black">
+    <section id="tech" class="white-text">
         <h1>What do I know?</h1>
         <p>(as you can see, almost everything)</p> 
         <p1>But I love learning and thrive at adapting. So if there’s anything else I need to know for your job, I’m ready to dive in!</p1>
@@ -136,8 +130,7 @@
         </div>
     </section>
     
-    
-    <section id="hire-me" class="gradient orange-purple">
+    <section id="hire-me" class="white-text">
         <h1>Why Should You Hire Me?</h1>
         <div class="why-hire-me-card">
             <h1><strong>Hello, <em>You</em>.</strong></h1>
@@ -146,9 +139,6 @@
             <p>So if you’re looking for someone who leads with purpose, learns with passion, and builds with precision—that's me!</p>
         </div>
     </section>
-
-
-    
 
     <footer>
         <p>&copy; 2025 Shreya Gupta</p>
