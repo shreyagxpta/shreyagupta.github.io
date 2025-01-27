@@ -395,3 +395,70 @@ nav a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for style */
 }
 
+.section-intro {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Timeline Styling */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+    flex: 1 1 45%; /* Default size for items */
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+/* More Emphasis Items */
+.more-emphasis {
+    flex: 1 1 70%;
+    text-align: left;
+}
+
+/* Less Emphasis Items */
+.less-emphasis {
+    flex: 1 1 30%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .more-emphasis {
+        flex: 1 1 100%;
+    }
+
+    .less-emphasis {
+        flex: 1 1 100%;
+    }
+}
