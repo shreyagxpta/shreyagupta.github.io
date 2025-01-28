@@ -136,6 +136,15 @@ nav a:hover {
     max-width: 600px;
 }
 
+.home-carousel img {
+    width: 100%; /* Ensure the image scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Keep the circular shape */
+    object-fit: cover; /* Ensures the image is well-positioned inside the circle */
+    max-width: 200px; /* Optional: Limit the size of the image on small screens */
+    margin: 0 auto; /* Center the image */
+}
+
 .carousel-container {
     width: 90%;
     overflow: hidden; /* Hide overflowing images */
@@ -159,12 +168,15 @@ nav a:hover {
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
+    width: 100%; /* Ensure the image fills its container */
+    max-width: 400px; /* Set a reasonable maximum width for laptops */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    object-fit: cover; /* Ensure the image fits well within the container */
+    margin: 0 auto; /* Center the image */
 }
+
 
 .caption {
     font-size: 1rem;
@@ -209,6 +221,19 @@ nav a:hover {
 
     .home-carousel {
         max-width: 100%;
+    }
+}
+
+/* For Smaller Screens */
+@media (max-width: 768px) {
+    .carousel-slide img {
+        max-width: 300px; /* Reduce the image size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slide img {
+        max-width: 250px; /* Further reduce the image size for mobile */
     }
 }
 
@@ -932,3 +957,33 @@ h2 {
     }
 }
 
+
+/* Responsive Parent Container for Smaller Screens */
+@media (max-width: 768px) {
+    .home-carousel {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        max-width: 90%; /* Reduce the width on smaller screens */
+        margin: 0 auto; /* Center the carousel */
+    }
+
+    .home-carousel img {
+        max-width: 150px; /* Reduce the image size further for small screens */
+    }
+
+    .home-carousel .caption {
+        font-size: 0.9rem; /* Adjust text size for small screens */
+        padding: 10px; /* Add padding for better spacing */
+    }
+}
+
+/* For Very Small Screens */
+@media (max-width: 480px) {
+    .home-carousel img {
+        max-width: 120px; /* Further reduce size */
+    }
+
+    .home-carousel .caption {
+        font-size: 0.8rem; /* Reduce caption text size */
+    }
+}
