@@ -141,6 +141,11 @@ nav a:hover {
     overflow: hidden; /* Hide overflowing images */
     position: relative;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between carousel and button */
+    margin-top: 20px;
 }
 
 .carousel {
@@ -525,6 +530,7 @@ h2 {
 .why-hire-me-card h1 {
     font-size: 2rem;
     margin-bottom: 15px;
+    color: #0ee6ac;
 }
 
 .why-hire-me-card p {
@@ -614,3 +620,180 @@ h2 {
 }
 
 
+/* Container for Flexbox Layout */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding-top: 40px; 
+}
+
+/* Left Section: Cards */
+.left-cards {
+    flex: 2; /* Larger space for the text section */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Transparent card background */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card h2,
+.card h3 {
+    margin-bottom: 0px;
+    margin-top:5px;
+    font-size: 1.4rem;
+    color: #a2e8c7;
+}
+
+.card p {
+    line-height: 1.4;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 5px;
+}
+
+.card ul li a {
+    color: #00bcd4; /* Light blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card ul li a:hover {
+    color: #0097a7; /* Darker blue on hover */
+}
+
+/* Right Section: Images */
+/* Right Section: Images */
+.right-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 5px;
+}
+
+/* Top Image */
+.right-images img:nth-child(1) {
+    width: 100%; /* Full width of the container */
+    height: auto;
+    max-height: 300px; /* Set max height for the top image */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Ensure the image fits nicely inside its box */
+}
+
+/* Bottom Image */
+.right-images img:nth-child(2) {
+    width: 100%; /* Full width of the container */
+    height: auto;
+    max-height: 330px; /* Set max height for the bottom image */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    object-fit: cover; /* Ensure the image fits nicely inside its box */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .right-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .right-images img {
+        flex: 1 1 48%; /* Split images into two rows */
+    }
+}
+
+.fake-carousel-button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Button color */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.fake-carousel-button:hover {
+    opacity: 1;
+}
+
+/* Title Link Styling */
+.topics-card h3 a {
+    color: #a2e8c7;
+    text-decoration: none;
+}
+
+.topics-card h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Disclaimer Styling */
+.disclaimer {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
+/* Topics List Styling */
+.topics-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.topics-list ul {
+    flex: 1;
+    margin: 0 50px;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.topics-list li {
+    margin-bottom: 1px; /* Reduced space between bullets */
+}
+
+/* Highlighted Text Styling */
+.highlighted-text {
+    color: #f1c40f;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Link Styling for Topics */
+.topics-link {
+    color: #a2e8c7; /* A vibrant green to match the theme */
+    text-decoration: none; /* Remove underline by default */
+    font-weight: bold; /* Make the link stand out */
+}
+
+.topics-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #16a085; /* Slightly darker green on hover for contrast */
+}
