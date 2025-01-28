@@ -415,14 +415,32 @@ nav a:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 15px; /* Add spacing between image and text */
+    width: 200px; /* Default size for larger screens */
+    height: 200px;
 }
 
 .profile-image {
-    width: 220px; /* Adjust size as needed */
-    height: 220px;
-    border-radius: 50%; /* Make the image circular */
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures the image maintains the container's aspect ratio */
+    object-fit: cover; /* Ensures the image fits well within the circle */
+    border-radius: 50%; 
     border: 3px solid #3ba19b; /* Add a border for emphasis */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for style */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-image-container {
+        width: 150px; /* Reduce size for tablets */
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image-container {
+        width: 120px; /* Further reduce size for phones */
+        height: 120px;
+    }
 }
 
 .section-intro {
