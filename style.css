@@ -393,8 +393,8 @@ nav a:hover {
 }
 
 .profile-image {
-    width: 120px; /* Adjust size as needed */
-    height: 120px;
+    width: 220px; /* Adjust size as needed */
+    height: 220px;
     border-radius: 50%; /* Make the image circular */
     border: 3px solid #3ba19b; /* Add a border for emphasis */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for style */
@@ -410,12 +410,12 @@ nav a:hover {
 /* Timeline Styling */
 .timeline {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items at the top */
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the timeline container */
 }
 
 /* Timeline Item Styling */
@@ -428,7 +428,7 @@ nav a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 325px;
+    min-height: 370px;
     overflow: hidden; /* Ensure content doesn't overflow */
 }
 
@@ -452,10 +452,13 @@ nav a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
-    min-height: 250px;
+    margin-bottom: 0px;
+    min-height: 150px;
     object-fit: cover; /* Ensures the image covers its container */
     z-index: -1; /* Ensures image stays below clickable link */
+    margin-top: 0px;
+    padding-top:0;
+    padding-bottom:0
 }
 
 .timeline-item:hover {
@@ -468,6 +471,10 @@ nav a:hover {
 .more-emphasis {
     flex: 1 1 40%;
     text-align: left;
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:0;
+    margin-bottom:0;
 }
 
 /* Less Emphasis Items */
@@ -656,8 +663,8 @@ h2 {
 
 /* Link styling inside card */
 .card h2 a.topics-link {
-    color: #1abc9c; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #a2e8c7; /* Link color */
+    text-decoration: underline; /* Remove underline */
 }
 
 .card h2 a.topics-link:hover {
@@ -679,14 +686,14 @@ h2 {
 }
 
 .card ul li a {
-    color: #00bcd4; /* Light blue for links */
+    color: #a2e8c7; /* Light blue for links */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .card ul li a:hover {
-    color: #0097a7; /* Darker blue on hover */
+    color: #a2e8c7; /* Darker blue on hover */
 }
 
 /* Right Section: Images */
@@ -800,13 +807,62 @@ h2 {
 
 /* Link Styling for Topics */
 .topics-link {
-    color: #a2e8c7; /* A vibrant green to match the theme */
-    text-decoration: none; /* Remove underline by default */
-    font-weight: bold; /* Make the link stand out */
+    color: #a2e8c7; /* Your desired color */
+    text-decoration: underline;
+    pointer-events: auto; /* Ensure the link is clickable */
+    position: relative; /* Isolate the link from any overlapping parent styles */
+    z-index: 10; /* Place it above other elements */
 }
 
 .topics-link:hover {
     text-decoration: underline; /* Add underline on hover */
-    color: #16a085; /* Slightly darker green on hover for contrast */
+    color: #a2e8c7; /* Slightly darker green on hover for contrast */
+}
+
+.timeline-item img.rectangular-image {
+    display: block; /* Ensure the image is visible */
+    width: 100%; /* Full width of the card */
+    max-width: 100%; /* Prevent it from exceeding the container */
+    height: auto; /* Maintain original aspect ratio */
+    margin: 0; /* Add spacing above and center it horizontally */
+    object-fit: contain; /* Ensure the entire image is shown without cropping */
+    border-radius: 5px; /* Optional rounded corners */
+    padding:0;
+    padding-top:0;
+    padding-bottom:0;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+
+.timeline-item a {
+    position: relative; /* Avoid blocking the image */
+    z-index: 0; /* Ensure the link doesn't overlap */
+}
+
+.timeline-item.less-emphasis img {
+    width: 100%; /* Maintain responsive width */
+    max-width: 100%; /* Limit the thumbnail size */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 350px; /* Restrict the maximum height */
+    object-fit: scale-down; /* Ensure the image fits neatly */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block; /* Ensure it's treated as a block element */
+}
+
+.timeline-item.less-emphasis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Adjust spacing for even content distribution */
+    align-items: center; /* Center-align content */
+    height: 250px; /* Set a fixed height for consistent box size */
+    text-align: center; /* Center-align text */
+    min-height: 150px
+}
+
+.timeline-item.less-emphasis p {
+    margin-top: 10px; /* Add some space above the text */
+    font-size: 0.9rem; /* Adjust font size for balance */
+    line-height: 1.4; /* Improve readability */
 }
 
