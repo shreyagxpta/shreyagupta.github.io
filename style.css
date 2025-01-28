@@ -594,27 +594,27 @@ h2 {
 
 /* Assign animation to each image */
 .photo-flash img:nth-child(1) {
-    animation: photo-flash 5s linear infinite;
+    animation: photo-flash 15s linear infinite;
 }
 
 .photo-flash img:nth-child(2) {
-    animation: photo-flash 5s linear infinite;
-    animation-delay: 1s; /* Delay for staggered effect */
+    animation: photo-flash 15s linear infinite;
+    animation-delay: 3s; /* Delay for staggered effect */
 }
 
 .photo-flash img:nth-child(3) {
-    animation: photo-flash 5s linear infinite;
-    animation-delay: 2s;
+    animation: photo-flash 15s linear infinite;
+    animation-delay: 6s;
 }
 
 .photo-flash img:nth-child(4) {
-    animation: photo-flash 5s linear infinite;
-    animation-delay: 3s;
+    animation: photo-flash 15s linear infinite;
+    animation-delay: 9s;
 }
 
 .photo-flash img:nth-child(5) {
-    animation: photo-flash 5s linear infinite;
-    animation-delay: 4s;
+    animation: photo-flash 15s linear infinite;
+    animation-delay: 12s;
 }
 
 /* Caption styling */
@@ -864,5 +864,71 @@ h2 {
     margin-top: 10px; /* Add some space above the text */
     font-size: 0.9rem; /* Adjust font size for balance */
     line-height: 1.4; /* Improve readability */
+}
+
+/* Carousel Dots Styling */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px; /* Space above dots */
+}
+
+.carousel-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d1e8e2; /* Default color for inactive dots */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    left: -40px; /* Shift the dots to the left (adjust this value as needed) */
+}
+
+/* Keyframe-based Active State */
+.carousel-dots .dot:nth-child(1) {
+    animation: dotSlide 20s infinite;
+    animation-delay: 0s;
+}
+.carousel-dots .dot:nth-child(2) {
+    animation: dotSlide 20s infinite;
+    animation-delay: 5s;
+}
+.carousel-dots .dot:nth-child(3) {
+    animation: dotSlide 20s infinite;
+    animation-delay: 10s;
+}
+.carousel-dots .dot:nth-child(4) {
+    animation: dotSlide 20s infinite;
+    animation-delay: 15s;
+}
+
+/* Dot Animation */
+@keyframes dotSlide {
+    0%, 20% {
+        background-color: #4db6ac; /* Active color */
+        transform: scale(1.2); /* Slight enlargement */
+    }
+    25%, 100% {
+        background-color: #d1e8e2; /* Inactive color */
+        transform: scale(1); /* Default size */
+    }
+}
+
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .carousel-dots {
+        left: -1%; /* Adjust for smaller screens */
+        transform: translateX(-1%); /* Fine-tune for responsiveness */
+        gap: 0.5rem; /* Reduce spacing between dots */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-dots {
+        left: 0; /* Center dots for very small screens */
+        transform: none; /* No additional adjustments needed */
+    }
 }
 
